@@ -18,7 +18,9 @@ public class AddressBookMain {
         System.out.println(" 0. Exit. ");
         System.out.println(" 1. Add contact. ");
         System.out.println(" 2. Edit contact. ");
-
+        System.out.println(" 3. Outprint contact. ");
+        System.out.println(" 4. Outprint all contacts. ");
+        System.out.println(" 5. Delete contact. ");
         menu = sc.nextInt();
 
         while (menu != 0) {
@@ -48,22 +50,39 @@ public class AddressBookMain {
                         menu = sc.nextInt();
                     }
                     break;
+
                 case 2:
                     System.out.println("Enter First Name of contact that you would like to edit: ");
                     int index = sc.nextInt();
+
+                    break;
+                case 3:
+                    System.out.println("Enter First Name of contact that you would like to delete: ");
+                    choice = sc.next();
+                    break;
+                case 4:
                     System.out.println(addressBook.contact);
                     break;
+                case 5:
+                    System.out.println("Enter First Name to delete: ");
+                    choice = sc.next();
+                    contact.remove(choice);
+                    break;
             }
+
             System.out.println(" 0. Exit. ");
             System.out.println(" 1. Add contact. ");
             System.out.println(" 2. Edit contact. ");
+            System.out.println(" 3. Outprint contact. ");
+            System.out.println(" 4. Outprint all contacts. ");
+            System.out.println(" 5. Delete contact. ");
             menu = sc.nextInt();
         }
         System.out.println("Goodbye!");
 
     }
 
-    public void addContact() {
+    private void addContact(String firstName, String lastName, String address, String city, String state, int zip, String email, long phoneno) {
         Contact person = new Contact();
         contact.add(person);
     }
