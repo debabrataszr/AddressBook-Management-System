@@ -17,6 +17,7 @@ public class AddressBookMain {
 
         System.out.println(" 0. Exit. ");
         System.out.println(" 1. Add contact. ");
+        System.out.println(" 2. Edit contact. ");
 
         menu = sc.nextInt();
 
@@ -47,13 +48,15 @@ public class AddressBookMain {
                         menu = sc.nextInt();
                     }
                     break;
-
-                default:
+                case 2:
+                    System.out.println("Enter First Name of contact that you would like to edit: ");
+                    int index = sc.nextInt();
+                    System.out.println(addressBook.contact);
                     break;
             }
             System.out.println(" 0. Exit. ");
             System.out.println(" 1. Add contact. ");
-
+            System.out.println(" 2. Edit contact. ");
             menu = sc.nextInt();
         }
         System.out.println("Goodbye!");
